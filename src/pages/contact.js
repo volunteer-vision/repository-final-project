@@ -1,11 +1,11 @@
 import Header from '../frontend/header/header';
 
-export default function Home() {
+export default function Contact() {
   return (
     <div>
-      <Header></Header>
+      <Header />
       <main>
-        <h1>Welcome to the Homepage</h1>
+        <h1>Contact Us</h1>
       </main>
     </div>
   );
