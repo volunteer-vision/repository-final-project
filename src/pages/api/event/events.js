@@ -1,4 +1,4 @@
-import { getAllevents } from "@/pages/server/services/CRUD";
+import { getAllevents } from "@/pages/server/services/events";
 
 export default async(req, res) => {
     const eventos = await getAllevents();

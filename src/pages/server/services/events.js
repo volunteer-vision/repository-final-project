@@ -1,8 +1,7 @@
-import { findAllEvents } from "../data/CRUD";
+import { findEventById } from "../data/CRUD";
 
 export async function getAllevents() {
-    const eventos = await findAllEvents();
-    const arr = ["dbajs","dshahd","djlkjadl"]
+    const eventos = await findEventById();
     return eventos
     
 }
