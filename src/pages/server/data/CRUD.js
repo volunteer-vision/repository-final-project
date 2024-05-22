@@ -1,5 +1,9 @@
-export async function GetOneRun(eventID) {
-    const collection = await GetCollection(dbName, runCollection)
-    const result = await collection.findOne(new ObjectId(eventID))
+const { getMongoCollection } = require("./mongodb");
+const db = "dbVoluntariado";
+const COLLECTION = "events";
+
+export async function findAllEvents() {
+    const collection = await getMongoCollection(db, COLLECTION)
+    const result = await collection.find().toArray();
     return result
 }

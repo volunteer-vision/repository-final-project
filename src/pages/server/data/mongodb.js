@@ -13,9 +13,9 @@ async function connectToMongo() {
   }
 }
 
-async function getMongoCollection(dbName, collectionName) {
+async function getMongoCollection(projetoFinalVoluntariado, events) {
   const client = await connectToMongo();
-  return client.db(dbName).collection(collectionName);
+  return client.db(projetoFinalVoluntariado).collection(events);
 }
 
 module.exports = { getMongoCollection };
