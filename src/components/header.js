@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styles from './header.module.css'; 
+import styles from '../styles/header.module.css'; 
+
  
 
 
@@ -8,7 +9,7 @@ export default function Header() {
     const router = useRouter();
 
     return (
-        <header className={styles.headerContainer}>
+        <div className={styles.headerContainer}>
           
             <div className={styles.logo}>
             <img src='../' alt='Logo Photo' />   {/* Colocar a logo */}
@@ -16,17 +17,17 @@ export default function Header() {
 
           
             <div>
-                <nav className={styles.navLinks}>
-                    <Link href="/" passHref legacyBehavior>
-                        <a className={styles.navLink}>Homepage</a>
+                <div className={styles.navLinks}>
+                    <Link href="/" className={styles.navLink}>
+                         Home
                     </Link>
-                    <Link href="/about" passHref legacyBehavior>
-                        <a className={styles.navLink}>About</a>
+                    <Link href="/about" className={styles.navLink}>
+                       About
                     </Link>
-                    <Link href="/contact" passHref legacyBehavior>
-                        <a className={styles.navLink}>Contact</a>
-                    </Link>
-                </nav>
+                    
+                        <Link href="/contact" className={styles.navLink}>Contact</Link>
+                    
+                </div>
             </div>
 
             
@@ -49,6 +50,6 @@ export default function Header() {
             <img src={"./"} alt='Profile photo' />    {/* colocar a foto do profile */}
             </div>
 
-        </header>
+        </div>
     );
 }

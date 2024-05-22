@@ -1,12 +1,11 @@
-import Header from '../frontend/header/header';
+import Header from "@/components/header"
 
 export default function Home() {
   return (
-    <div>
-      <Header></Header>
-      <main>
-        <h1>Welcome to the Homepage</h1>
-      </main>
-    </div>
+    <main className="container">
+      <div>
+        adeus
+      </div>
+    </main>
   );
 }
