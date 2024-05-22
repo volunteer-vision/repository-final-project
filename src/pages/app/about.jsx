@@ -1,4 +1,4 @@
-import Header from '..//frontend/header/header';
+import Header from '../../frontend/header/header';
 
 export default function About() {
   return (
