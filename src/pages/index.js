@@ -1,58 +1,11 @@
-// import styles from "../styles/Home.module.css"
 
-// export default function Home() {
-//   return (
-//     <div>
-//       <main className={styles.mainphrase}>
-
-//         <h1 className={styles.phrase}>Volunteer today, impact tomorrow</h1>
-
-//         <hr></hr>
-
-//         <div className={styles.buttondiv}>
-
-//           <button className={styles.volunteerbutton}>Volunteer Now</button>
-
-//         </div>
-
-
-
-
-
-//         <div className={styles.gridMain1}>
-
-//           <img src='imagens/foto1.jpg' alt='photo' /><img src='imagens/foto2.jpg' alt='photo' />
-
-//         </div>
-
-//         <div className={styles.gridMain2}>
-
-//           <img src='imagens/foto3.jpg' alt='photo' /><img src='imagens/foto4.jpg' alt='photo' />
-
-//         </div>
-
-
-
-
-
-//         <div>
-
-//           <h2 class={styles.journey}>Start your journey!</h2>
-
-//           <img className={styles.mapaimg} src='imagens/foto5.png' alt='photo' />
-
-//         </div>
-
-//       </main>
-
-//     </div>
-//   );
-// }
 
 import Header from "../components/header";
 import styles from '@/styles/Home.module.css';
+import { useRouter } from 'next/router';
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div>
 
@@ -63,7 +16,7 @@ export default function Home() {
         <div className={styles.horizontalline}></div>
 
         <div className={styles.buttondiv}>
-          <button className={styles.volunteerbutton}>Volunteer Now</button>
+          <button className={styles.volunteerbutton} onClick={() => router.push('./events')}>Volunteer Now</button>
         </div>
 
         <div className={styles.gridMain1}>

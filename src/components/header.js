@@ -11,8 +11,8 @@ export default function Header() {
     return (
         <div className={styles.headerContainer}>
           
-            <div className={styles.logo}>
-            <img src='../' alt='Logo Photo' />   {/* Colocar a logo */}
+            <div >
+            <img className={styles.logoPrincipal} src='../img/logo.svg' alt='Logo Photo'  onClick={() => router.push('/')}/>   {/* Colocar a logo */}
             </div>
 
           
@@ -29,11 +29,11 @@ export default function Header() {
                     
                 </div>
             </div>
-            <button onClick={() => {document.body.scrollTop = document.body.scrollHeight} }></button>
+           
 
             
             <div className={styles.globeIcon} onClick={() => router.push('./Mapa')}> {/* colocar o link da pagina MAPA */}
-                
+                Globo
             </div>
 
             
@@ -54,3 +54,4 @@ export default function Header() {
         </div>
     );
 }
+

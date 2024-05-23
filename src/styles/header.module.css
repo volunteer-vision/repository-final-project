@@ -1,77 +1,4 @@
-/* 
-.headerContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    padding: 2rem 2rem;
-    color: white;
-    border-bottom: 2px solid #000000;
-}
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-   
-}
-.logoimg{
-    height: 100px;
-    width: 150px;
-}
-
-.navLinks {
-    display: flex;
-    gap: 1rem;   
-}
-
-.navLink {
-    color:black;
-    text-decoration: none;
-    padding: 0.5rem 1.5rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    color: #1244a5;
-    font-family: sans-serif;
-    font-size: large;
-}
-
-.navLink:hover {
-    background-color: #eee0e0;
-}
-
-.searchBar {
-    display: flex;
-    align-items: center;
-    background-color: #000000;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.searchInput {
-    border-style: groove;
-    padding: 0.5rem;
-    outline: none;
-}
-
-.searchButton {
-    background-color:#1244a5;
-    border-style: groove;
-    padding: 0.5rem 1rem;
-    color: white;
-    cursor: pointer;
-}
-
-.searchButton:hover {
-    background-color: #1244a5;
-    
-}
-
-.globeIcon {
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-} */
 
 .headerContainer {
     display: flex;
@@ -79,12 +6,13 @@
     justify-content: space-between;
     padding: 10px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 90px;
 }
 
-.logo img {
-    width: 100px;
-    height: auto;
-    border-radius: 5px;
+.logoPrincipal {
+    color: black;
+    height: 100px;
+    
 }
 
 .navLinks {
@@ -95,7 +23,8 @@
 .navLink {
     color: black;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 25px;
+    padding: 30px;
     transition: color 0.3s ease;
 }
 
