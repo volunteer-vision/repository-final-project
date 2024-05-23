@@ -8,6 +8,7 @@ js
     min-height: 100vh;
     margin: 0;
     padding: 20px;
+    
 }
 
 .cardContainer {
@@ -15,6 +16,8 @@ js
     grid-template-columns: repeat(3, 1fr);
     gap: 60px;
     justify-items: center;
+    padding-top: 80px;
+    padding-bottom: 120px;
 }
 
 .card {

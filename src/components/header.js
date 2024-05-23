@@ -25,7 +25,7 @@ export default function Header() {
                        About
                     </Link>
                     
-                        <Link href="/contact" className={styles.navLink}>Contact</Link>
+                        <Link href="#footer" className={styles.navLink}>Contact</Link>
                     
                 </div>
             </div>

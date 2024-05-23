@@ -1,21 +1,26 @@
 
 
 .footer {
+  display: flex;
+  align-items: end;
   background-color: blue;
-  background-image: linear-gradient(red, green);
+  background-image: linear-gradient(#8fb8d3, #3363c3);
   color: #fff;
   padding: 40px 20px;
   text-align: center;
   height: 200px;
+  
+  
 }
 
 .footerContainer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
+  
 }
 
 .footerLogo {
@@ -58,12 +63,14 @@
 }
 
 .socialIcon {
+  
   vertical-align:  middle;
   margin-right: 5px;
 }
 .twitter{
  padding-right: 20px;
 }
+
 .footerSocial ul li a {
   color: #2980b9;
   text-decoration: none;

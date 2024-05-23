@@ -1,3 +1,9 @@
 .container{
     min-height: 70vh;
+
+
+}
+
+* {
+    scroll-behavior: smooth;
 }

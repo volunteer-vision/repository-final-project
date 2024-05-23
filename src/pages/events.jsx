@@ -1,9 +1,10 @@
 import styles from '../styles/events.module.css'
 export default function Events() {
     return (
+        <main>
       <div>
 
-        <main className={styles.page}>
+        <div className={styles.page}>
 
           <div className={styles.cardContainer}>
 
@@ -138,7 +139,8 @@ export default function Events() {
     
             
           </div>
-        </main>
+        </div>
       </div>
+      </main>
     );
   }
