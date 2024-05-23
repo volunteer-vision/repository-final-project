@@ -1,9 +1,10 @@
+/* 
 .headerContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    padding: 3rem 2rem;
+    padding: 2rem 2rem;
     color: white;
     border-bottom: 2px solid #000000;
 }
@@ -12,19 +13,27 @@
     font-size: 24px;
     font-weight: bold;
     color: black;
+   
+}
+.logoimg{
+    height: 100px;
+    width: 150px;
 }
 
 .navLinks {
     display: flex;
-    gap: 1rem;
+    gap: 1rem;   
 }
 
 .navLink {
     color:black;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    color: #1244a5;
+    font-family: sans-serif;
+    font-size: large;
 }
 
 .navLink:hover {
@@ -40,25 +49,123 @@
 }
 
 .searchInput {
-    border: none;
+    border-style: groove;
     padding: 0.5rem;
     outline: none;
 }
 
 .searchButton {
-    background-color: #4CAF50;
-    border: none;
+    background-color:#1244a5;
+    border-style: groove;
     padding: 0.5rem 1rem;
     color: white;
     cursor: pointer;
 }
 
 .searchButton:hover {
-    background-color: #45a049;
+    background-color: #1244a5;
+    
 }
 
 .globeIcon {
     font-size: 24px;
     color: #fff;
     cursor: pointer;
+} */
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.navLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.navLink {
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: #3498db;
+}
+
+.globeIcon img {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchInput {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.searchButton {
+    padding: 5px 15px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.searchButton:hover {
+    background-color: #2980b9;
+}
+
+.headerContainer > div:last-child img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .headerContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .searchBar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .searchInput {
+        flex-grow: 1;
+    }
+
+    .searchButton {
+        width: 100%;
+        margin-top: 5px;
+    }
 }

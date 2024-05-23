@@ -1,8 +1,9 @@
 import { eventos } from "@/pages/server/services/eventosId";
+import { filterOneEvent } from "@/pages/server/services/events";
 
 export default async(req, res) => {
     const {id} = req.query
-    const events = await eventos(id);
+    const events = await filterOneEvent(id);
     if (events === null) {
         res.status(400).json({message: "id nao valido"});
     }

@@ -1,11 +1,74 @@
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #333;
-    height: 140px;
-    margin-top: 2em;
-    border-top: 3px solid #111;
-    color: #fff;
 
-  }
+
+.footer {
+  background-color: blue;
+  background-image: linear-gradient(red, green);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  height: 200px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footerLogo {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.logoImg {
+  max-width: 150px;
+}
+
+.footerLogo p {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+.footerContacts, .footerSocial {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+  padding-right: 200px;
+}
+
+.footerContacts h4, .footerSocial h4 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #2980b9;
+}
+
+.footerContacts ul, .footerSocial ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerContacts ul li, .footerSocial ul li {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+.socialIcon {
+  vertical-align:  middle;
+  margin-right: 5px;
+}
+.twitter{
+ padding-right: 20px;
+}
+.footerSocial ul li a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.footerSocial ul li a:hover {
+  text-decoration: underline;
+}

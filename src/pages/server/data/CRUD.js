@@ -4,6 +4,12 @@ const db = "dbVoluntariado";
 const COLLECTION = "events";
 const COLLECTION1 = "users"
 
+export async function createUser(user) {
+    const collection = await getMongoCollection(db, COLLECTION1)
+    const result = await collection.insertOne(user)
+    return result
+}
+
 export async function findAllEvents() {
     const collection = await getMongoCollection(db, COLLECTION)
     const result = await collection.find().toArray();

@@ -1,7 +1,7 @@
-import { getAllevents } from "@/pages/server/services/events";
+import { filterAllevents } from "@/pages/server/services/events";
 
 export default async(req, res) => {
-    const eventos = await getAllevents();
+    const eventos = await filterAllevents();
     if (eventos.length === 0) {
       res.status(400).json({message: "n deu"});
     }
