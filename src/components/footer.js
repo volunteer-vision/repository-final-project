@@ -11,6 +11,7 @@ export default function Footer() {
             
         </div>
         <div className={styles.footerContacts}>
+        
             <h4>Contact</h4>
             <ul>
                 <li>Email: volunteer.vision@gmail.com</li>

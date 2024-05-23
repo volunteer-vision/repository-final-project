@@ -1,0 +1,77 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; //h-screen */
+    /* width: 100%; */
+}
+
+.checkzinho {
+    align-self: flex-start; /* Aligns the checkbox div to the start of the flex container */
+    margin-bottom: 10px; /* Adds space between the checkbox and the form */
+    margin-left: 30px; /* Adjust this value to move it further to the left */
+    display: flex;
+    align-items: center;
+}
+
+.checkzinho input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #5c635e; /* For modern browsers to change the checkbox color */
+}
+
+.checkzinho label {
+    font-size: 16px;
+    color: #333;
+}
+
+.form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px; 
+}
+
+.submitButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(205, 204, 204);
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 130px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.submitButton:hover {
+    background-color: gray;
+}
+
+.textarea {
+    border: 1px solid black;
+    background-color: rgb(222, 222, 222);
+    color: black;
+    border-radius: 10px;
+    resize: none;
+    height: 100px; 
+    padding: 10px;
+    box-sizing: border-box;
+    width: 900px;
+    height: 500px;
+    font-size: 24px;
+      /* Optional: minimum height for textarea */
+}
+.textarea::placeholder{
+    color: black;
+    font-size: 24px
+}

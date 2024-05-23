@@ -1,8 +1,10 @@
+import Footer from "@/components/footer";
+
 export default function Contact() {
   return (
     <div>
       <main>
-        <h1>Contact Us</h1>
+        <Footer/>
       </main>
     </div>
   );
