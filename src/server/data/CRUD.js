@@ -39,6 +39,11 @@ export async function findUserById(id) {
     }
     return null
 }
+export async function findUserByEmail(email) {
+        const collection = await getMongoCollection(db, COLLECTION1);
+        const result = await collection.findOne({ "email": email })
+        return result
+}
 
 
 /////////////////////////////////////////////////////////////////////////////

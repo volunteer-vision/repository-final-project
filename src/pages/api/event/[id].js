@@ -1,7 +1,7 @@
 
 
-import { eventos } from "@/pages/server/services/eventosId";
-import { filterOneEvent } from "@/pages/server/services/events";
+import { eventos } from "@/server/services/eventosId";
+import { filterOneEvent } from "@/server/services/events";
 
 
 

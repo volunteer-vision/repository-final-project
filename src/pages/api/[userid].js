@@ -1,4 +1,4 @@
-import { user } from "../server/services/users";
+import { user } from "../../server/services/users";
 
 export default async(req, res) => {
     const {userid} = req.query

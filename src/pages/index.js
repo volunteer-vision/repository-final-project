@@ -66,7 +66,7 @@ export default function Home() {
 
         <div>
           <h2 class={styles.journey}>Start your journey!</h2>
-          <img className={styles.mapaimg} src='imagens/foto5.png' alt='photo' />
+          <img className={styles.mapaimg} id="mapa" src='imagens/foto5.png' alt='photo' />
         </div>
       </main>
 

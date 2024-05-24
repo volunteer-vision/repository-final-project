@@ -1,4 +1,4 @@
-import { filterAllevents } from "@/pages/server/services/events";
+import { filterAllevents } from "@/server/services/events";
 
 export default async(req, res) => {
     const eventos = await filterAllevents();

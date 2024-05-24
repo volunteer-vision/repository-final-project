@@ -32,9 +32,9 @@ export default function Header() {
            
 
             
-            <div className={styles.globeIcon} onClick={() => router.push('./Mapa')}> {/* colocar o link da pagina MAPA */}
+            <p className={styles.globeIcon} href="#mapa"> {/* colocar o link da pagina MAPA */}
                 Globo
-            </div>
+            </p>
 
             
             <div className={styles.searchBar}>

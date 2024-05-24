@@ -1,4 +1,4 @@
-import { createUser } from "@/pages/server/data/CRUD"
+import { createUser } from "@/server/data/CRUD"
 
 export default async(req, res) => {
     if(req.method === "POST") {

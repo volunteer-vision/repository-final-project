@@ -10,12 +10,12 @@ export default function Offer() {
   useEffect(() => {
     async function fetchData() {
       const id = router.query.offer
-      console.log(id)
+      if(id === undefined) return
       const data = await fetchEventosById(id)
       setEvents(data)
     }
     fetchData()
-  },[])
+  },[router])
   return (
     <div>
       <main className={styles.main}>
@@ -50,7 +50,7 @@ export default function Offer() {
               <p>Stay & Food</p>
             </div>
           </div>
-          <button className={styles.applyBtn} onClick={() => router.push('./motivationForm')}>Apply Now!</button>
+          <button className={styles.applyBtn} onClick={() => router.push(`./motivationForm/${router.query.offer}`)}>Apply Now!</button>
         </div>
       </main>
     </div>

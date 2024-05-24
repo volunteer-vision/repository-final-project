@@ -2,9 +2,11 @@
 
 // components/MotivationForm.js
 import React, { useState } from "react";
-import styles from "../styles/motivatioform.module.css"
+import styles from "../../styles/motivatioform.module.css"
 import { useRouter } from "next/router";
 
+// localStorage.setItem("userId", "safaguih32uu21")
+// localStorage.getItem("userId")
 
 export default function MotivationForm() {
   const [useProfileData, setUseProfileData] = useState(false);
@@ -15,17 +17,19 @@ export default function MotivationForm() {
     e.preventDefault();
     // Handle form submission
     
+    console.log(router.query.offer)
     const res = await fetch ("/api/submit",{
       method:"POST", 
       headers:{"Content-Type":"Application/json"},
       body:JSON.stringify({
-        data:motivationalLetter
+        data:motivationalLetter,
+        eventId: router.query.offer,
+        userId: "664e0391179116f43c5abbf0"
       })
     })
     const id = await res.json()
     console.log(id)
-    router.push("./sucssessSubmit")
-    console.log({ useProfileData, motivationalLetter });
+    router.push("/sucssessSubmit")
   };
 
   return (

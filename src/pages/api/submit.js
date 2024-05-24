@@ -1,8 +1,8 @@
-import { createForm } from "../server/services/submited"
+import { createForm } from "../../server/services/submited"
 
 export default async (req, res) => {
-    const {data}  = req.body
-
+    const {data, eventId, userId}  = req.body
+    console.log(data, eventId, userId)
       if(req.method === "POST"){
         const id = await createForm(data)
 
