@@ -1,0 +1,119 @@
+/* body {
+    font-family: Arial, sans-serif;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  } */
+  
+  .container {
+    font-family: Arial, sans-serif ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: gray; */
+    padding: 20px;
+    height: 100vh;
+    /* border-radius: 10px; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  }
+  .aroundform{
+    /* border: 1px solid black; */
+    display: flex;
+    
+  }
+  
+  .profilepicheart {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    
+    /* border: 1px solid black; */
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profilepic {
+    /* text-align: center; */
+    
+  }
+  
+  .profilepic img {
+    border-radius: 20%;
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+  }
+  
+  .likes {
+    margin-left: 10px;
+    color: blue;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .formgroup {
+    margin-bottom: 15px;
+  }
+  
+  .formgroup label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .yeyeye{
+    /* border: 1px solid black; */
+  }
+  .formgroup input {
+    width: 800px;
+    height: 30px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .savebutton {
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    
+  }
+  
+  .savebutton:hover {
+    background-color: #0056b3;
+  }
+  .buttonbox{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 5px;
+  }
+  
+  .uploadbutton{
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  .formgroup input {
+    background-color: rgb(222, 222, 222);  
+}

@@ -1,17 +1,22 @@
-import { updateUser } from "@/pages/server/data/CRUD"
-import Id from "./event/[id]"
+import { createForm } from "../server/services/submited"
 
-export default async(req, res) => {
-    if(req.method === "POST") {
-        const { message } = req.body
-        const result = updateUser(req.body)
-        res.status(200).json({result})
-    }
+export default async (req, res) => {
+    const {data}  = req.body
+
+      if(req.method === "POST"){
+        const id = await createForm(data)
+
+        if (!id){
+            return res.status(400).json({
+
+                message: "Não foi possivel criar",
+               
+            })
+        }
+
+       return res.status(200).json({id})
+      }
+      res.status(404).json({message:"ERROR"})
+
+
 }
-db.movies.updateOne( { Id: "" },
-{
-  $set: {
-    plot: "A teenage girl risks everything–including her life–when she falls in love with a vampire."
-  },
-  $currentDate: { lastUpdated: true }
-})

@@ -48,9 +48,8 @@ export default function Header() {
                 </button>
             </div>
             <div>
-            <img src={"./"} alt='Profile photo' />    {/* colocar a foto do profile */}
+            <img src={"img/profile.png"} alt='Profile photo' onClick={() => router.push('./profile')}/>    {/* colocar a foto do profile */}
             </div>
-
         </div>
     );
 }

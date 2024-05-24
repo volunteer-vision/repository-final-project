@@ -13,9 +13,7 @@ export default function Events() {
     }
     fetchData()
   },[])
- 
 
-console.log(events)
 
 // events.map((e) => e.imagemUrl)
 
@@ -34,7 +32,7 @@ console.log(events)
               <div className={styles.cardImage}>
                 <img src={e.imagemUrl} alt="Imagem da Vaga" />
               </div>
-              <div className={styles.cardContent}>´
+              <div className={styles.cardContent}>
 
               <h3>Location</h3>
           <p>{e.location}</p>

@@ -5,14 +5,26 @@ import React, { useState } from "react";
 import styles from "../styles/motivatioform.module.css"
 import { useRouter } from "next/router";
 
+
 export default function MotivationForm() {
   const [useProfileData, setUseProfileData] = useState(false);
   const [motivationalLetter, setMotivationalLetter] = useState("");
   const router = useRouter()
-
-  const handleSubmit = (e) => {
+  
+  const  handleSubmit = async(e) => {
     e.preventDefault();
     // Handle form submission
+    
+    const res = await fetch ("/api/submit",{
+      method:"POST", 
+      headers:{"Content-Type":"Application/json"},
+      body:JSON.stringify({
+        data:motivationalLetter
+      })
+    })
+    const id = await res.json()
+    console.log(id)
+    router.push("./sucssessSubmit")
     console.log({ useProfileData, motivationalLetter });
   };
 

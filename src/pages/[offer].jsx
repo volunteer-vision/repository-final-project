@@ -13,7 +13,6 @@ export default function Offer() {
       console.log(id)
       const data = await fetchEventosById(id)
       setEvents(data)
-      
     }
     fetchData()
   },[])
