@@ -10,6 +10,12 @@ export async function createUser(user) {
     return result
 }
 
+export async function updateUser(user1) {
+    const collection = await getMongoCollection(db, COLLECTION1)
+    const result = await collection.updateOne(user1)
+    return result
+}
+
 export async function findAllEvents() {
     const collection = await getMongoCollection(db, COLLECTION)
     const result = await collection.find().toArray();

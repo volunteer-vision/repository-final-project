@@ -19,7 +19,9 @@ export async function filterOneEvent(id) {
         commitment: e.commitment,
         effort: e.effort,
         mission: e.mission,
-        specs: e.specs       
+        specs: e.specs,
+        imgUrlOffer1: e.imgUrlOffer1,       
+        imgUrlOffer2: e.imgUrlOffer2       
 }))        
 }
 

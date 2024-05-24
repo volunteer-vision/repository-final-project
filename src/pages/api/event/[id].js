@@ -1,5 +1,9 @@
+
+
 import { eventos } from "@/pages/server/services/eventosId";
 import { filterOneEvent } from "@/pages/server/services/events";
+
+
 
 export default async(req, res) => {
     const {id} = req.query

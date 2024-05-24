@@ -1,81 +1,82 @@
 
-
 .footer {
-  display: flex;
-  align-items: end;
-  background-color: blue;
-  background-image: linear-gradient(#8fb8d3, #3363c3);
-  color: #fff;
-  padding: 40px 20px;
+  background-color: rgb(35, 34, 34);
   text-align: center;
-  height: 200px;
-  
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding: 20px ;
+  margin: 0;
 }
 
 .footerContainer {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  
+  width: 100%;
 }
 
-.footerLogo {
+.footerContacts,
+.footerSocial {
   flex: 1;
   min-width: 250px;
   margin-bottom: 20px;
 }
 
-.logoImg {
-  max-width: 150px;
+.footerContacts {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding-right: 20px;
+  margin-right: 20px;
 }
 
-.footerLogo p {
-  margin-top: 10px;
-  font-size: 1.1em;
-}
-
-.footerContacts, .footerSocial {
-  flex: 1;
-  min-width: 250px;
-  margin-bottom: 20px;
-  padding-right: 200px;
-}
-
-.footerContacts h4, .footerSocial h4 {
+.footerContacts h4,
+.footerSocial h4 {
   font-size: 1.3em;
   margin-bottom: 10px;
-  color: #2980b9;
+  color: rgb(252, 237, 237);
 }
 
-.footerContacts ul, .footerSocial ul {
+.footerContacts ul,
+.footerSocial ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  color: rgb(204, 202, 202);
 }
 
-.footerContacts ul li, .footerSocial ul li {
-  margin: 5px 0;
+.footerContacts ul li,
+.footerSocial ul li {
+  margin: 1px 0;
   font-size: 1.1em;
 }
 
-.socialIcon {
-  
-  vertical-align:  middle;
-  margin-right: 5px;
-}
-.twitter{
- padding-right: 20px;
+.footerSocial ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
 }
 
-.footerSocial ul li a {
-  color: #2980b9;
+.footerSocial ul li {
+  margin: 0 10px;
+}
+
+.socialIcon {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.footerSocial a {
+  color: rgb(204, 202, 202);
   text-decoration: none;
 }
 
-.footerSocial ul li a:hover {
+.footerSocial a:hover {
   text-decoration: underline;
+ 
+}
+
+.text {
+  text-align: start; 
 }

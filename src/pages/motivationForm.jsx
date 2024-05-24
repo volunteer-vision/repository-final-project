@@ -3,10 +3,12 @@
 // components/MotivationForm.js
 import React, { useState } from "react";
 import styles from "../styles/motivatioform.module.css"
+import { useRouter } from "next/router";
 
 export default function MotivationForm() {
   const [useProfileData, setUseProfileData] = useState(false);
   const [motivationalLetter, setMotivationalLetter] = useState("");
+  const router = useRouter()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +38,7 @@ export default function MotivationForm() {
             placeholder="Enter your motivational letter here..."
           ></textarea>
         </div>
-        <button type="submit" className={styles.submitButton}>
+        <button type="submit" className={styles.submitButton} onClick={() => router.push("./sucssessSubmit")}>
           Submit
         </button>
       </form>
