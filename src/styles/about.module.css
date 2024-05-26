@@ -1,0 +1,50 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sectionTitle {
+    font-size: 2em;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.sectionText {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.introduction, .importance, .audience {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 40px 0;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.textBlock {
+    flex: 1;
+    padding: 20px;
+}
+
+.imageBlock {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.teamImage, .importanceImage, .audienceImage {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
