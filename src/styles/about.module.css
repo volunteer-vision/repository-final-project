@@ -1,4 +1,4 @@
-.main {
+/* .main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,4 +47,117 @@
     max-width: 400px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+.main {
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.firstsectioncolor {
+    background-color: #1C82AD;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 27px;
+}
+
+.sectionTitle {
+    font-size: 2em;
+    color: black;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sectionText {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.introduction,
+.importance,
+.audience {margin-top: 25px;
+    display: flex;
+    width: 1040px;
+}
+
+.secondsectioncolor {
+    background-color: #badae6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 27px;
+}
+
+.thirdsectioncolor {
+    background-color: #ffb1b171;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 27px;
+}
+
+.textBlock {
+    flex: 1;
+    padding: 20px;
+}
+
+.imageBlock {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.teamImage,
+.importanceImage,
+.audienceImage {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.teamImage1 {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.sectionTitle1 {
+    font-size: 2em;
+    color: black;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+}
+
+
+.sectionText1 {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 20px;
+    font-family:  Helvetica, sans-serif;
+    color: black;
+    font-size: 20px;
+}
+
+.teamImage2 {
+    width: 100%;
+    height: auto;
+    max-width: 475px;
+    border-radius: 8px;
+    margin-left: 10px;
+} 

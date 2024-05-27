@@ -15,7 +15,7 @@ export default async(req, res) => {
 
 
 
-
-        res.status(200).json({userId: user._id})
+        // res.status(200).json({userId: user._id})
+        res.status(200).json({message: "Login efetuado com sucesso"})
     }
 }

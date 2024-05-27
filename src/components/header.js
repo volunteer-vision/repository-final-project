@@ -1,54 +1,67 @@
+
+
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styles from '../styles/header.module.css'; 
+import styles from '../styles/header.module.css';
+import { FaUser } from 'react-icons/fa';
+import { AiOutlineSearch } from "react-icons/ai";
+import { FaGlobeAmericas } from "react-icons/fa";
 
- 
+
 
 
 export default function Header() {
     const router = useRouter();
 
     return (
-        <div className={styles.headerContainer}>
-          
-            <div >
-            <img className={styles.logoPrincipal} src='../img/logo.svg' alt='Logo Photo'  onClick={() => router.push('/')}/>   {/* Colocar a logo */}
-            </div>
+        <div className={styles.headercolor}>
+            <div className={styles.headerContainer}>
 
-          
-            <div>
-                <div className={styles.navLinks}>
-                    <Link href="/" className={styles.navLink}>
-                         Home
-                    </Link>
-                    <Link href="/about" className={styles.navLink}>
-                       About
-                    </Link>
-                    
-                        <Link href="#footer" className={styles.navLink}>Contact</Link>
-                    
+                <div >
+                    <img className={styles.logoPrincipal} src='../imagens/logo.png' alt='Logo Photo' onClick={() => router.push('/')} />   {/* Colocar a logo */}
                 </div>
-            </div>
-           
 
-            
-            <p className={styles.globeIcon} href="#mapa"> {/* colocar o link da pagina MAPA */}
-                Globo
-            </p>
 
-            
-            <div className={styles.searchBar}>
-                <input 
-                    type="text" 
-                    placeholder="Search..." 
-                    className={styles.searchInput} 
-                />
+                <div>
+                    <div className={styles.navLinks}>
+                        <Link href="/" className={styles.navLink}>
+                            Home
+                        </Link>
+                        <Link href="/about" className={styles.navLink}>
+                            About
+                        </Link>
+
+                        <Link href="#footer" className={styles.navLink}>Contact</Link>
+
+                        <Link href="/events" className={styles.navLink}>
+                            Events
+                        </Link>
+
+                    </div>
+                </div>
+
+
+
+                <Link href="#mapa"><FaGlobeAmericas  className={styles.globeIcon} /></Link>
+                
+               
+
+
+                <div className={styles.searchBar}>
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        className={styles.searchInput}
+                    />
                 <button className={styles.searchButton}>
-                    Search
-                </button>
-            </div>
-            <div>
-            <img src={"img/profile.png"} alt='Profile photo' onClick={() => router.push('./profile')}/>    {/* colocar a foto do profile */}
+                        <AiOutlineSearch className={styles.searchIcon}/>
+                    </button>
+                </div>
+                <div>
+                     
+                    <FaUser className = {styles.profileIcon} src={"imagens/profileicon.png"} alt='Profile photo' onClick={() => router.push('./profile')}/>
+                    {/* colocar a foto do profile */}
+                </div>
             </div>
         </div>
     );

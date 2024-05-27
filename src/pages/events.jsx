@@ -24,11 +24,11 @@ export default function Events() {
 
         <div className={styles.page}>
 
-          <div className={styles.cardContainer}>
+          <div className={styles.cardContainer} >
 
             
               {events?.map(e => 
-               <div className={styles.card}>
+               <div className={styles.card} onClick={() => router.push(`./${e._id}`)}> 
               <div className={styles.cardImage}>
                 <img src={e.imagemUrl} alt="Imagem da Vaga" />
               </div>
@@ -44,7 +44,7 @@ export default function Events() {
           <p>{e.objective}</p>
 
 
-                <button className={styles.seeMore} onClick={() => router.push(`./${e._id}`)}>See More</button>
+                
               </div>
               </div>)}
              </div> 

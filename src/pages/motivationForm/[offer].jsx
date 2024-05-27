@@ -16,9 +16,7 @@ export default function MotivationForm() {
   const  handleSubmit = async(e) => {
     e.preventDefault();
     // Handle form submission
-    
-    console.log(router.query.offer)
-    const res = await fetch ("/api/submit",{
+      const res = await fetch ("/api/submit",{
       method:"POST", 
       headers:{"Content-Type":"Application/json"},
       body:JSON.stringify({
