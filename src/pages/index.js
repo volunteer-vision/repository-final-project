@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css';
 
 import { useRouter } from 'next/router';
 import CARDS from '@/components/cards';
+import MapChart from '@/components/MapComponent';
 
 export default function Home() {
   const [lightboxImage, setLightboxImage] = useState(null);
@@ -84,7 +85,7 @@ export default function Home() {
         <div className={styles.startyourjourney}>
           <h2 className={styles.secondtitles} id='mapa'>Start your journey!</h2>
           <p className={styles.startyourjourneyparagraph}>Click on this map to choose your region and begin your adventure</p>
-          <img src='imagens/mapamundo.png' alt='photo' />
+          <MapChart/>
         </div>
         <div className={styles.cardsmaincolor}>
             <CARDS />
