@@ -90,7 +90,9 @@
     align-items: center;
 }
 
-.cardimagetemplate {}
+.cardimagetemplate {
+    color: #00337C;
+}
 
 .icones {
 
@@ -98,20 +100,21 @@
 
 .cardtexttemplate {
     margin-top: -50px;
+    color: #00337C;
 }
 
 .cardstitle {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 70px;
     font-weight: bold;
-    color: black;
+    color: #00337C;
     text-align: center;
 }
 
 .cardstext {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
-    color: black;
+    color: #00337C;
     text-align: center;
     margin-top: -40px;
 }

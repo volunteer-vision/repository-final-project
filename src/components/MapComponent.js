@@ -20,10 +20,10 @@ export default function MapChart() {
                 style={{
                   default: {
                     fill: "#D6D6DA",
-                    outline: "none",
+                    outline: "#none",
                   },
                   hover: {
-                    fill: "#FF5722",
+                    fill: "#FFB1B1",
                     outline: "none",
                   },
                   pressed: {
