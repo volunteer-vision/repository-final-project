@@ -6,12 +6,14 @@ import styles from '../styles/header.module.css';
 import { FaUser } from 'react-icons/fa';
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaGlobeAmericas } from "react-icons/fa";
+import { useRef } from 'react';
 
 
 
 
 export default function Header() {
     const router = useRouter();
+    const searchBarValue = useRef()
 
     return (
         <div className={styles.headercolor}>
@@ -52,8 +54,9 @@ export default function Header() {
                         type="text"
                         placeholder="Search..."
                         className={styles.searchInput}
+                        ref={searchBarValue}
                     />
-                <button className={styles.searchButton}>
+                <button className={styles.searchButton} onClick={() => router.push(`/events?events=${searchBarValue.current.value}`)}>
                         <AiOutlineSearch className={styles.searchIcon}/>
                     </button>
                 </div>

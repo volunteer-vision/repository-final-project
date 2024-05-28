@@ -1,119 +1,91 @@
-/* body {
-    font-family: Arial, sans-serif;
-    display: flex;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-  } */
-  
-  .container {
-    font-family: Arial, sans-serif ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: gray; */
-    padding: 20px;
-    height: 100vh;
-    /* border-radius: 10px; */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  }
-  .aroundform{
-    /* border: 1px solid black; */
-    display: flex;
-    
-  }
-  
-  .profilepicheart {
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+   margin: 20px;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 50px;
-    
-    /* border: 1px solid black; */
+    align-items: center;
+   padding-left: 320px;
+}
+
+.aroundform {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profilepicheart {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-  }
-  
-  .profilepic {
-    /* text-align: center; */
-    
-  }
-  
-  .profilepic img {
-    border-radius: 20%;
-    width: 100px;
-    height: 100px;
-    margin-left: 10px;
-  }
-  
-  .likes {
-    margin-left: 10px;
-    color: blue;
+}
+
+.profilepic img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid #007bff;
+}
+
+.likes {
+    margin-top: 10px;
+    color: #007bff;
     font-weight: bold;
     font-size: 24px;
-  }
-  
-  .formgroup {
-    margin-bottom: 15px;
-  }
-  
-  .formgroup label {
+}
+
+.formgroup {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.formgroup label {
     display: block;
     margin-bottom: 5px;
-  }
-  .yeyeye{
-    /* border: 1px solid black; */
-  }
-  .formgroup input {
-    width: 800px;
-    height: 30px;
-    padding: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.formgroup input {
+    width: 100%;
+    padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  .savebutton {
-    width: 150px;
-    height: 40px;
-    align-items: center;
-    padding: 10px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.formgroup input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.buttonbox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.savebutton, .uploadbutton {
+    padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
     color: white;
-    border: 1px solid black;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    
-    
-  }
-  
-  .savebutton:hover {
-    background-color: #0056b3;
-  }
-  .buttonbox{
-    /* border: 1px solid black; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-around;
-    padding: 5px;
-  }
-  
-  .uploadbutton{
-    width: 150px;
-    height: 40px;
-    align-items: center;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: 1px solid black;
-    border-radius: 5px;
-  }
+    transition: background-color 0.3s ease;
+}
 
-  .formgroup input {
-    background-color: rgb(222, 222, 222);  
+.savebutton:hover, .uploadbutton:hover {
+    background-color: #0056b3;
 }

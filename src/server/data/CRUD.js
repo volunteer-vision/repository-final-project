@@ -56,6 +56,13 @@ export async function findAllEvents() {
     return result
 }
 
+export async function searchEvent(value) {
+    const collection = await getMongoCollection(db, COLLECTION)
+    const result = await collection.find({$and: [{$or: [{"location": value}, {"organization": value}]}]}).toArray();
+    console.log(result)
+    return result
+}
+
 export async function findEventById(id) {
     if (ObjectId.isValid(id)) {
         const newID = new ObjectId(String(id))
@@ -80,6 +87,6 @@ export async function findEventApplications(eventId) {
 
 export async function insertForm(data) {
     const collection = await getMongoCollection(db, COLLECTION3)
-    const result = await collection.insertOne({cotent: data})
+    const result = await collection.insertOne(data)
     return result.insertedId
 }

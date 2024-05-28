@@ -1,139 +1,59 @@
- .containerMain{
-  width:80% ;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  padding-left: 120px; 
-  
- } 
- 
- .cardMurta{
-   transition: transform 0.5s;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   border-radius: 8px;
-   margin: 0 20px; 
-   height: 400px; 
-   width: 240px; 
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-   background-color: #FF5733 ;
-   padding-left: 65px;
-   padding-right: 65px;
-   align-items: center;
- }
- .text{
-   color: white;
-   width: 120px;
-   
- }
- 
- .cardJane{
-   transition: transform 0.5s;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   border-radius: 8px;
-   margin: 0 20px; 
-   height: 400px; 
-   width: 240px; 
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-   background-color: #3357FF  ;
-   padding-left: 65px;
-   padding-right: 65px;
-   align-items: center;
- }
- 
- .cardMaria{
-   transition: transform 0.5s;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   border-radius: 8px;
-   margin: 0 20px; 
-   height: 400px; 
-   width: 240px; 
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-   background-color: #FF33A1   ;
-   padding-left: 65px;
-   padding-right: 65px;
-   align-items: center;
- }
- 
- .cardJohn{
-   transition: transform 0.5s;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   border-radius: 8px;
-   margin: 0 20px; 
-   height: 400px; 
-   width: 240px; 
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-   background-color: #33FFF3    ;
-   padding-left: 65px;
-   padding-right: 65px;
-   align-items: center;
- }
- 
- .cardJoao{
-   transition: transform 0.5s;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   border-radius: 8px;
-   margin: 0 20px; 
-   height: 400px; 
-   width: 240px; 
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-   background-color: #FFD700     ;
-   padding-left: 65px;
-   padding-right: 65px;
-   align-items: center;
- }
- 
- .cardCarlos{
-   transition: transform 0.5s;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   border-radius: 8px;
-   margin: 0 20px; 
-   height: 400px; 
-   width: 240px; 
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-   background-color: #00FF00      ;
-   padding-left: 65px;
-   padding-right: 65px;
-   align-items: center;
- }
- 
- .cardEvelyn{
-   transition: transform 0.5s;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   border-radius: 8px;
-   margin: 0 20px; 
-   height: 400px; 
-   width: 240px; 
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-   background-color: #FF8C00       ;
-   padding-left: 65px;
-   padding-right: 65px;
-   align-items: center;
- }
- 
- 
- .testimonyText {
-   color: white  ;
-   width:180px;
- font-weight: 400px;
-   
- }
- 
- .headshot {
-   width: 100px;
-   height: 100px;
-   border-radius: 50%;
-   padding-top: 5px;
- }
+.containerMain {
+  width: 80%;
+  margin: 80px auto;
+  padding-left: 120px;
+}
+
+.cardMurta, .cardJane, .cardMaria, .cardJohn, .cardJoao, .cardCarlos, .cardEvelyn {
+  transition: transform 0.5s, box-shadow 0.5s;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin: 0 20px;
+  height: 400px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+  align-items: center;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  border: 1px solid #ddd;
+  transform: scale(1);
+}
+
+.cardMurta { background: linear-gradient(145deg, #288FC0, #46D3E3); }
+.cardJane { background: linear-gradient(145deg, #46D3E3, #288FC0); }
+.cardMaria { background: linear-gradient(145deg, #3CBDD2, #288FC0); }
+.cardJohn { background: linear-gradient(145deg, hwb(196 20% 18%), #288FC0); }
+.cardJoao { background: linear-gradient(145deg, #288FC0, #1E78AF); }
+.cardCarlos { background: linear-gradient(145deg, #1E78AF, #14619E); }
+.cardEvelyn { background: linear-gradient(145deg, #14619E, #00337C); }
+
+
+
+.text, .textMaria {
+  color: white;
+  width: 120px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.testimonyText {
+  color: white;
+  width: 190px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.headshot {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding-top: 5px;
+  border: 3px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

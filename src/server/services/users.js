@@ -3,8 +3,7 @@ import { findUserByEmail, findUserById } from "../data/CRUD"
 export async function user(id) {
 
     const result = await findUserById(id)
-    if (result == null) return result
-    
+    if (result === null) return false
     return result
 }
 

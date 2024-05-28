@@ -8,7 +8,6 @@ import DownloadIcon from '@mui/icons-material/Download';
 
 // npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
 
-
 export default function Profile() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -59,7 +58,7 @@ export default function Profile() {
     width: 1,
   });
 
-const handleDownloadPDF = () => {
+  const handleDownloadPDF = () => {
     const doc = new jsPDF();
     doc.text(`Full Name: ${formData.fullName}`, 10, 10);
     doc.text(`Email: ${formData.email}`, 10, 20);
@@ -74,85 +73,79 @@ const handleDownloadPDF = () => {
       <form className={styles.aroundform} onSubmit={handleSubmit}>
         <div className={styles.profilepicheart}>
           <div className={styles.profilepic}>
-            <img src="https://via.placeholder.com/100" alt="Profile Pic" />
+            <img src="https://via.placeholder.com/120" alt="Profile Pic" />
           </div>
           <div className={styles.likes}>12</div>
         </div>
-        <div className={styles.yeyeye}>
-          <div className={styles.formgroup}>
-            <label htmlFor="fullName">Full Name</label>
-            <input
-              type="text"
-              name="fullName"
-              id="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-            //   placeholder="Enter your full name"
-            />
-          </div>
-          <div className={styles.formgroup}>
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              value={formData.email}
-              onChange={handleChange}
-            //   placeholder="Enter your email"
-            />
-          </div>
-          <div className={styles.formgroup}>
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              value={formData.password}
-              onChange={handleChange}
-            //   placeholder="Enter your password"
-            />
-          </div>
-          <div className={styles.formgroup}>
-            <label htmlFor="skills">Skills</label>
-            <input
-              type="text"
-              name="skills"
-              id="skills"
-              value={formData.skills}
-              onChange={handleChange}
-            //   placeholder="Enter your skills"
-            />
-          </div>
-          <div className={styles.formgroup}>
-            <label htmlFor="linkedin">LinkedIn</label>
-            <input
-              type="url"
-              name="linkedin"
-              id="linkedin"
-              value={formData.linkedin}
-              onChange={handleChange}
-            //   placeholder="Enter your linkedIn"
-            />
-          </div>
-          <div className={styles.buttonbox}>
-            <Button className={styles.uploadbutton}
-              component="label"
-              role={undefined}
-              variant="contained"
-            //   tabIndex={-1}
-              startIcon={<DownloadIcon />}
-            >
-              UPLOAD FILE
-              <VisuallyHiddenInput type="file" />
-            </Button>
-            
-            <button className={styles.savebutton} type="submit">
-              Save
-            </button>
-          </div>
+        <div className={styles.formgroup}>
+          <label htmlFor="fullName">Full Name</label>
+          <input
+            type="text"
+            name="fullName"
+            id="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
+            placeholder="Enter your full name"
+          />
+        </div>
+        <div className={styles.formgroup}>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Enter your email"
+          />
+        </div>
+        <div className={styles.formgroup}>
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            value={formData.password}
+            onChange={handleChange}
+            placeholder="Enter your password"
+          />
+        </div>
+        <div className={styles.formgroup}>
+          <label htmlFor="skills">Skills</label>
+          <input
+            type="text"
+            name="skills"
+            id="skills"
+            value={formData.skills}
+            onChange={handleChange}
+            placeholder="Enter your skills"
+          />
+        </div>
+        <div className={styles.formgroup}>
+          <label htmlFor="linkedin">LinkedIn</label>
+          <input
+            type="url"
+            name="linkedin"
+            id="linkedin"
+            value={formData.linkedin}
+            onChange={handleChange}
+            placeholder="Enter your LinkedIn"
+          />
+        </div>
+        <div className={styles.buttonbox}>
+          <Button className={styles.uploadbutton}
+            component="label"
+            variant="contained"
+            startIcon={<DownloadIcon />}
+          >
+            UPLOAD FILE
+            <VisuallyHiddenInput type="file" />
+          </Button>
+          <button className={styles.savebutton} type="submit">
+            Save
+          </button>
         </div>
       </form>
     </div>
   );
 }
-

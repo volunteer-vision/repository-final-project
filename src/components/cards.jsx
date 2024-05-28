@@ -67,7 +67,7 @@ export default function CARDS() {
               alt="Photo of Maria Gonzalez"
             />
             <div className={styles.testimonyContent}>
-              <h3 className={styles.text}>Maria Gonzalez</h3>
+              <h3 className={styles.textMaria}>Maria Gonzalez</h3>
             </div>
           </div>
           <p className={styles.testimonyText}>

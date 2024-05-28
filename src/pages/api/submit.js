@@ -1,16 +1,19 @@
+import { user } from "@/server/services/users"
 import { createForm } from "../../server/services/submited"
 
 export default async (req, res) => {
-    const {data, eventId, userId}  = req.body
-    console.log(data, eventId, userId)
+    const {data, eventId, userId}  = req.body  
       if(req.method === "POST"){
-        const id = await createForm(data)
+        const userExists = await user(userId)
+        if(!userExists){
+        return res.status(404).json({message: "user não encontrado"})
+        }
+        
+        const id = await createForm(req.body)
 
         if (!id){
             return res.status(400).json({
-
-                message: "Não foi possivel criar",
-               
+                message: "Não foi possivel criar",        
             })
         }
 

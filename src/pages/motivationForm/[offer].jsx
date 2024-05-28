@@ -31,31 +31,27 @@ export default function MotivationForm() {
   };
 
   return (
-    <div className={styles.container}>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <div className={styles.checkzinho}>
-          <input
-            type="checkbox"
-            id="useProfileData"
-            checked={useProfileData}
-            onChange={() => setUseProfileData(!useProfileData)}
-          />
-          <label htmlFor="useProfileData">Use Profile Data</label>
-        </div>
-        <div>
-          <textarea
-            id="motivationalLetter"
-            value={motivationalLetter}
-            onChange={(e) => setMotivationalLetter(e.target.value)}
-            // onSubmit={handleSubmit}
-            className={styles.textarea}
-            placeholder="Enter your motivational letter here..."
-          ></textarea>
-        </div>
-        <button type="submit" className={styles.submitButton} onClick={() => router.push("./sucssessSubmit")}>
-          Submit
-        </button>
-      </form>
-    </div>
+    
+    
+      <div className={styles.container}>
+        <h2 className={styles.title}>Motivational Letter</h2>
+        <form onSubmit={handleSubmit} className={styles.form}>
+      
+          <div>
+            <textarea
+              id="motivationalLetter"
+              value={motivationalLetter}
+              onChange={(e) => setMotivationalLetter(e.target.value)}
+              // onSubmit={handleSubmit}
+              className={styles.textarea}
+              placeholder="Enter your motivational letter here..."
+            ></textarea>
+          </div>
+          <button type="submit" className={styles.submitButton} onClick={() => router.push("./sucssessSubmit")}>
+            Submit
+          </button>
+        </form>
+      </div>
+    
   );
 }
