@@ -4,6 +4,14 @@ export async function fetchEventos() {
     const resultado = res.status === 200 ? res.json() : []
     return resultado
 }
+export async function fetchEventosByValue(value) {
+    console.log(value)
+    const option = { method: "GET", headers: { 'Content-Type': 'aplication/json' } }
+    const res = await fetch(`/api/event/search/${value}`, option)
+    const resultado = res.status === 200 ? await res.json() : []
+    console.log(resultado)
+    return resultado.result
+}
 export async function fetchEventosById(id) {
     const option1 = { method: "GET", headers: { 'Content-Type': 'aplication/json' } }
     const res1 = await fetch(`/api/event/${id}`, option1)

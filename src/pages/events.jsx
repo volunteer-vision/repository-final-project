@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from '../styles/events.module.css'
 
 import { useRouter } from 'next/router';
-import { fetchEventos } from '@/frontend/logic/fetch';
+import { fetchEventos, fetchEventosByValue } from '@/frontend/logic/fetch';
 import { useSearchParams } from 'next/navigation';
 export default function Events() {
   const [events, setEvents] = useState()
@@ -11,15 +11,23 @@ export default function Events() {
 
 
   useEffect(() => {
+    console.log(router.query)
     const search = searchParams.get("events")
-    console.log(search)
     async function fetchData() {
-      if (search) { }
-      const data = await fetchEventos()
-      setEvents(data)
+      let data
+      if (search) {
+        data = await fetchEventosByValue(search)
+      } else {
+        data = await fetchEventos()
+      }
+
+      if (data) {
+        console.log(data)
+        setEvents(data)
+      }
     }
     fetchData()
-  }, [])
+  }, [router.query])
 
 
   // events.map((e) => e.imagemUrl)

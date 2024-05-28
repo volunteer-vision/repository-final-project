@@ -57,9 +57,10 @@ export async function findAllEvents() {
 }
 
 export async function searchEvent(value) {
+    console.log("value",value)
     const collection = await getMongoCollection(db, COLLECTION)
-    const result = await collection.find({$and: [{$or: [{"location": value}, {"organization": value}]}]}).toArray();
-    console.log(result)
+    const result = await collection.find({$and: [{$or: [{"location": String(value)}, {"organization": String(value)}]}]}).toArray();
+    console.log("dgfdgfdgfdgfd",result)
     return result
 }
 

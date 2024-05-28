@@ -44,7 +44,7 @@ export default function Header() {
 
 
 
-                <Link href="#mapa"><FaGlobeAmericas  className={styles.globeIcon} /></Link>
+                <Link href="/#mapa"><FaGlobeAmericas  className={styles.globeIcon} /></Link>
                 
                
 
