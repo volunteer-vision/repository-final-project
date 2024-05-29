@@ -5,7 +5,6 @@ export async function fetchEventos() {
     return resultado
 }
 export async function fetchEventosByValue(value) {
-    console.log(value)
     const option = { method: "GET", headers: { 'Content-Type': 'aplication/json' } }
     const res = await fetch(`/api/event/search/${value}`, option)
     const resultado = res.status === 200 ? await res.json() : []
