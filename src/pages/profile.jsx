@@ -3,12 +3,14 @@ import styles from "../styles/profile.module.css";
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import DownloadIcon from '@mui/icons-material/Download';
+import { useRouter } from "next/router";
 
 // import jsPDF from "jspdf";
 
 // npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
 
 export default function Profile() {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -19,6 +21,7 @@ export default function Profile() {
 
   useEffect(() => {
     async function handleProfile() {
+      
       try {
         const res = await fetch("https://api.example.com/profile"); // Replace with your API endpoint
         const profile = await res.json();
@@ -34,6 +37,12 @@ export default function Profile() {
       }
     }
     handleProfile();
+    const token = localStorage.getItem("token")
+    if(token === undefined) {
+      router.push(() => {
+        
+      })
+      }
   }, []);
 
   const handleChange = (e) => {

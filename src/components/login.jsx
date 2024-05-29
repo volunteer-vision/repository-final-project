@@ -19,7 +19,13 @@ const Login = () => {
       })
     }
     const res = await fetch ('api/auth/login', options)
+    const data = await res.json()
     
+    console.log("adhgahjdgsha",data.id)
+    if(res.status === 200) {
+      console.log("adhgahjdgsha",data.id)
+      localStorage.setItem('token', data.id)
+    }
 
   }
     if(action === 'Sign Up') {
