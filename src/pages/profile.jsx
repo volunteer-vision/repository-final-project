@@ -92,6 +92,11 @@ export default function Profile() {
     doc.text(`LinkedIn: ${formData.linkedin}`, 10, 50);
     doc.save("profile.pdf");
   };
+
+  const logOut = () => {
+    localStorage.removeItem("token")
+    router.push("/login")
+   }
   return (
     <div className={styles.container}>
       <form className={styles.aroundform} onSubmit={handleSubmit}>
@@ -156,8 +161,10 @@ export default function Profile() {
             placeholder="Enter your LinkedIn"
           />
         </div>
+        
         <div className={styles.buttonbox}>
-          <Button className={styles.uploadbutton}
+          <button className={styles.logOutButton} onClick={() => logOut()}>Log Out</button>
+           <Button className={styles.uploadbutton}
             component="label"
             variant="contained"
             startIcon={<DownloadIcon />}
@@ -168,6 +175,7 @@ export default function Profile() {
           <button className={styles.savebutton} type="submit" >
             Save
           </button>
+         
         </div>
       </form>
     </div>

@@ -2,9 +2,11 @@
   height: 100%;
   width: 100%;
   background-color: rgb(35, 34, 34);
-  padding: 20px;
+  overflow-x: hidden;
   margin: 0;
   font-family: Helvetica, sans-serif;
+  padding-bottom: 20px;
+
 }
 
 .container {
@@ -12,6 +14,7 @@
 
   height: 100%;
   width: 100%;
+  
 }
 
 .text {
@@ -34,6 +37,7 @@
   display: flex;
   justify-content: space-around;
   height: 100px;
+  margin-bottom: 10px;
 }
 
 .newstext {
@@ -93,6 +97,7 @@
 .footerinfo {
   display: flex;
   justify-content: space-around;
+  margin-top: 10px;
 }
 
 .icons {
@@ -120,11 +125,17 @@
   color: #a1a1aa;
   display: flex;
   align-items: flex-end;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   font-size: 12px;
   height: 20px;
+  gap:4px;
 
   /* border: 1px solid black; */
+}
+.rightsIcon{
+  color: white;
+  height: 20px;
+  width: 20px;
 }

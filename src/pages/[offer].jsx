@@ -20,7 +20,7 @@ export default function Offer() {
     <div>
       <main className={styles.main}>
         <div className={styles.container}>
-        <h1 className={styles.hederText}>Título da vaga</h1>
+        <h1 className={styles.hederText}>{events?.title}</h1>
           <div className={styles.headerContent}>
             <div className={styles.header}>
               <img src={events?.imgUrlOffer1} alt="Foto construindo casa" />
@@ -38,20 +38,19 @@ export default function Offer() {
           </div>
           <div className={styles.cards}>
             <div className={styles.card1}>
-              <h2>+150</h2>
-              <p>New Houses</p>
+              <h2>{events?.specs[0]}</h2>
+            
             </div>
             <div className={styles.card2}>
-              <h2>200+</h2>
-              <p>Volunteers</p>
+              <h2>{events?.specs[1]}</h2>
+            
             </div>
             <div className={styles.card3}>
-              <h2>Free</h2>
-              <p>Stay & Food</p>
+              <h2>{events?.specs[2]}</h2>
+             
             </div>
           </div>
-          <button className={styles.applyBtn} onClick={() => router.push(`./motivationForm/${router.query.offer}`)}>Apply Now!</button>
-        </div>
+          <div className={styles.button}><button className={styles.applyBtn} onClick={() => router.push(`./motivationForm/${router.query.offer}`)}>Apply Now!</button></div>        </div>
       </main>
     </div>
   );

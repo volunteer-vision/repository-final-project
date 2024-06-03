@@ -89,3 +89,18 @@
 .savebutton:hover, .uploadbutton:hover {
     background-color: #0056b3;
 }
+
+.logOutButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e64e16;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logOutButton:hover { 
+    background-color: #c73e0d;
+}

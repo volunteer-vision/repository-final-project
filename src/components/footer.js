@@ -3,10 +3,23 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
+import { useState } from "react";
+import { FaRegCopyright } from "react-icons/fa";
+
+import Modal from "./modal";
 
 //npm i react-icons
 
 export default function Footer() {
+  const [openModal, setModal] = useState(false);
+
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = () => {
+    setModal(true);
+    setEmail("");
+  };
+
   return (
     <div className={styles.footer} id="footer">
       <div className={styles.container}>
@@ -15,9 +28,21 @@ export default function Footer() {
             <h3>
               <b>SUBSCRIBE OUR NEWSLETTER</b>
             </h3>
-            <div className={styles.newsubmit} >
-              <input className={styles.buttonemail} type="email" placeholder="Enter your Email"></input>
-              <button className={styles.buttonsub} >Submit</button>
+            <div className={styles.newsubmit}>
+              <input
+                className={styles.buttonemail}
+                type="email"
+                placeholder="Enter your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              ></input>
+              <button
+                className={styles.buttonsub}
+                onClick={handleSubmit}
+              >
+                Submit
+              </button>
+              <Modal modal={openModal} closeModal={() => setModal(false)} />
             </div>
           </div>
 
@@ -71,7 +96,12 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className={styles.rights}>@ All rights deserved</div>
+
+      <div className={styles.rights}>
+        {/* <img className={styles.rightsIcon} src="./imagens/copy.png"/> */}
+        <FaRegCopyright />
+        All rights reserved
+      </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ export async function filterAllevents() {
     const eventos = await findAllEvents();
     return eventos.map((e) => ({
         _id: e._id,
-        imagemUrl: e.imgUrl,
+        imgUrl: e.imgUrl,
         location: e.location,
         organization: e.organization,
         duration: e.duration,

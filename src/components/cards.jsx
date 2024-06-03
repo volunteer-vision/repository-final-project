@@ -95,11 +95,11 @@ export default function CARDS() {
           <div>
             <img
               className={styles.headshot}
-              src="/imagens/joao.jpg"
+              src="/imagens/selma.jpg"
               alt="Phoho of Joao"
             />
             <div className={styles.testimonyContent}>
-              <h3 className={styles.text}>João Maria</h3>
+              <h3 className={styles.text}>Maria João</h3>
             </div>
           </div>
           <p className={styles.testimonyText}>
@@ -112,7 +112,7 @@ export default function CARDS() {
           <div>
             <img
               className={styles.headshot}
-              src="/imagens/carlos.jpeg"
+              src="/imagens/vinny.jpg"
               alt="Photo os Carlos"
             />
             <div className={styles.testimonyContent}>
@@ -133,7 +133,7 @@ export default function CARDS() {
               alt="Photo of Evelyn"
             />
             <div className={styles.testimonyContent}>
-              <h3 className={styles.text}>Evelyn Santos</h3>
+              <h3 className={styles.text}>Juan Carlos</h3>
             </div>
           </div>
           <p className={styles.testimonyText}>

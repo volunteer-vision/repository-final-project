@@ -6,15 +6,16 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
+    background-color: #badae6;
 }
 
 .container {
-    background: #fff;
+    background: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 800px;
+    max-width: 1040px;
     width: 100%;
+    height: auto;
     border-radius: 8px;
 }
 
@@ -33,7 +34,8 @@
 .header {
     display: flex;
     flex-direction: column;
-    width: 48%;
+    width: 40%;
+    
 }
 
 .header img {
@@ -44,10 +46,12 @@
 }
 
 .content {
-    width: 48%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
+    margin-left: 25px;
 }
 
 .content h2 {
@@ -62,26 +66,28 @@
 }
 
 .card1 {
-    background: #ffebcd;
+   background-color: #BF8C2E;
     padding: 20px;
     width: 25%;
-    border-radius: 8px;
+    border-radius: 10px;
     text-align: center;
+
+
     
     /* background-image: url("/imagens/foto1.jpg");  */
 }
 .card2 {
-    background: #f5f5dc;
+    background-color: #3F7D44;
     padding: 20px;
     width: 25%;
-    border-radius: 8px;
+    border-radius: 10px;
     text-align: center;
 }
 .card3 {
-    background: #ffa07a;
+    background-color: #a21943;
     padding: 20px;
     width: 25%;
-    border-radius: 8px;
+    border-radius: 10px;
     text-align: center;
 }
 
@@ -91,10 +97,10 @@
 
 .applyBtn {
     display: block;
-    width: 100%;
-    padding: 15px;
+    width: 29%;
+    padding: 20px;
     text-align: center;
-    background: #3498db;
+    background: #2286c4;
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
@@ -104,6 +110,16 @@
     transition: background 0.3s ease;
 }
 
-.applyBtn:hover {
+.applyBtn:hover{
     background: #0056b3;
+}
+
+.applyBtn:active{
+    background-color: #ffb1b1;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

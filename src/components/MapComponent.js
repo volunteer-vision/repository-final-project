@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
 import styles from "../styles/MapComponent.module.css";
+import { useRouter } from "next/router";
 
 const geoUrl =
   "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson";
@@ -8,9 +9,10 @@ const geoUrl =
 export default function MapChart() {
   const [tooltipContent, setTooltipContent] = useState("");
   const [hoveredCountry, setHoveredCountry] = useState("");
+  const router = useRouter()
 
   const markers = [
-    { markerOffset: 15, name: "Global Aid Network", coordinates: [10.271826, -1.684598], country: "Ghana" },
+    { markerOffset: 15, name: "Global Aid Network", coordinates: [10.2718, -1.68459], country: "Gabon" },
     { markerOffset: 15, name: "Green Future Initiative", coordinates: [-51.9253, -14.235], country: "Brazil" },
     { markerOffset: 15, name: "Hope for Health Foundation", coordinates: [113.9213, -0.7893], country: "Indonesia" },
     { markerOffset: 15, name: "Community Builders Alliance", coordinates: [37.9062, -0.0236], country: "Kenya" },
@@ -64,17 +66,20 @@ export default function MapChart() {
         </Geographies>
         {markers.map(({ name, coordinates, markerOffset, country }, index) => (
           <Marker key={index} coordinates={coordinates}>
-            <g
-              fill="none"
-              stroke="#ff0000"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              transform="translate(-18, -36)"
-            >
-              <circle cx="18" cy="15" r="4.5" />
-              <path d="M18 32.55C25.95 25.5 30 19.5 30 15a12 12 0 1 0-24 0c0 4.5 4.05 10.5 12 17.55z" />
-            </g>
+           <g
+                  fill="#FF6347"
+                  stroke="#FF4500"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  onClick={() => router.push(`/events?events=${country}`)}
+                  style={{ cursor: 'pointer' }}
+                  transform="translate(-12, -24)"
+                  // onClick={() => router.push("./events")}
+                >
+                  <path d="M12 21.35C12 21.35 4 13.28 4 8a8 8 0 1 1 16 0c0 5.28-8 13.35-8 13.35z" />
+                  <circle cx="12" cy="8" r="3" fill="#FFFFFF" />
+                </g>
             {hoveredCountry === country && (
               <text
                 textAnchor="middle"

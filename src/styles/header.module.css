@@ -1,5 +1,3 @@
-
-
 .headercolor {
     background-color: #00337C;
     height: 135px;
@@ -16,6 +14,7 @@
 .logoPrincipal {
     color: black;
     height: 100px;
+    cursor: pointer;
     
 }
 
@@ -36,7 +35,8 @@
 
 .navLink:hover {
     color: #FFB1B1;
-    font-weight: bold;
+   
+  
 }
 
 .globeIcon  {
