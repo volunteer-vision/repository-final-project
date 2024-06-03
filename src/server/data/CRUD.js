@@ -39,10 +39,29 @@ export async function findUserById(id) {
     }
     return null
 }
+
 export async function findUserByEmail(email) {
-        const collection = await getMongoCollection(db, COLLECTION1);
-        const result = await collection.findOne({ "email": email })
-        return result
+    const collection = await getMongoCollection(db, COLLECTION1);
+    const result = await collection.findOne({ "email": email })
+    return result
+}
+
+
+export async function updateDataUser({id, fullName, email, skills, linkedin}) { 
+    console.log(id, fullName, email, skills, linkedin)
+    const collection = await getMongoCollection(db, COLLECTION1);
+    const result = await collection.updateOne({
+        _id: new ObjectId(String(id))
+    },
+        {
+            $set: {
+                fullName: fullName,
+                email: email,
+                skills: skills,
+                linkedin: linkedin
+            }
+        })
+    return result
 }
 
 
@@ -57,10 +76,10 @@ export async function findAllEvents() {
 }
 
 export async function searchEvent(value) {
-    console.log("value",value)
+    console.log("value", value)
     const collection = await getMongoCollection(db, COLLECTION)
-    const result = await collection.find({$and: [{$or: [{"location": String(value)}, {"organization": String(value)}]}]}).toArray();
-    console.log("dgfdgfdgfdgfd",result)
+    const result = await collection.find({ $and: [{ $or: [{ "location": String(value) }, { "organization": String(value) }] }] }).toArray();
+    console.log("dgfdgfdgfdgfd", result)
     return result
 }
 
@@ -80,7 +99,7 @@ export async function createApplication(userId, eventId, message) {
 
 }
 export async function findUserApplications(userId) {
-    
+
 }
 export async function findEventApplications(eventId) {
 

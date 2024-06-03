@@ -1,8 +1,10 @@
 // components/Login.js
 import React, { useRef, useState } from 'react';
 import styles from '../styles/login.module.css';
+import { useRouter } from 'next/router';
 
 const Login = () => {
+  const router = useRouter()
   const [action, setAction] = useState('Login');
   const emailValue = useRef()
   const passwordValue = useRef()
@@ -21,10 +23,10 @@ const Login = () => {
     const res = await fetch ('api/auth/login', options)
     const data = await res.json()
     
-    console.log("adhgahjdgsha",data.id)
+    
     if(res.status === 200) {
-      console.log("adhgahjdgsha",data.id)
       localStorage.setItem('token', data.id)
+      router.push("/")
     }
 
   }

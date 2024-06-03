@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 
 export default function Profile() {
   const router = useRouter()
+  const [updateUser, setUser] = useState(false)
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -21,39 +22,54 @@ export default function Profile() {
 
   useEffect(() => {
     async function handleProfile() {
-      
+      const token = localStorage.getItem("token")
+      if(token === null) {
+        router.push("/login")
+        }
       try {
-        const res = await fetch("https://api.example.com/profile"); // Replace with your API endpoint
-        const profile = await res.json();
-        setFormData({
-          fullName: profile.name || "",
-          email: profile.email || "",
-          password: profile.password || "",
-          skills: profile.skills || "",
-          linkedin: profile.linkedin || "",
-        });
+        const res = await fetch(`/api/${token}`); // Replace with your API endpoint
+        if (res.status === 200 ) {
+          const profile = await res.json();
+          console.log(profile)
+          setFormData({
+          fullName: profile[0]?.fullName || "",
+          email: profile[0]?.email || "",
+          password: profile[0]?.password || "",
+          skills: profile[0]?.skills || "",
+          linkedin: profile[0]?.linkedin || "",
+        });}
       } catch (error) {
         console.error("Error fetching profile data:", error);
       }
     }
     handleProfile();
-    const token = localStorage.getItem("token")
-    if(token === undefined) {
-      router.push(() => {
-        
-      })
-      }
-  }, []);
+  }, [updateUser]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    
   };
 
-  const handleSubmit = (e) => {
+  const  handleSubmit =  async (e) => {
+    const id = localStorage.getItem("token")
     e.preventDefault();
-    console.log(formData);
-  };
+    const options = {
+        method:"POST", 
+        headers:{"Content-Type":"Application/json"},
+        body:JSON.stringify({
+          id: id,
+          ...formData
+        })
+      }
+    const res = await fetch(`/api/updateUser`, options)
+    
+    if(res.status === 200) {
+      const updatedProfile = await res.json()
+      setFormData(updatedProfile)
+      setUser(!updateUser)
+    }
+};
 
   const VisuallyHiddenInput = styled('input')({
     clip: 'rect(0 0 0 0)',
@@ -76,7 +92,6 @@ export default function Profile() {
     doc.text(`LinkedIn: ${formData.linkedin}`, 10, 50);
     doc.save("profile.pdf");
   };
-
   return (
     <div className={styles.container}>
       <form className={styles.aroundform} onSubmit={handleSubmit}>
@@ -150,7 +165,7 @@ export default function Profile() {
             UPLOAD FILE
             <VisuallyHiddenInput type="file" />
           </Button>
-          <button className={styles.savebutton} type="submit">
+          <button className={styles.savebutton} type="submit" >
             Save
           </button>
         </div>

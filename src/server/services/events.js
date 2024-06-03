@@ -1,3 +1,4 @@
+import { Title } from "@mui/icons-material";
 import { findAllEvents, findEventById } from "../data/CRUD";
 
 export async function filterAllevents() {
@@ -16,6 +17,7 @@ export async function filterOneEvent(id) {
     const eventos = await findEventById(id);
     return eventos.map((e) => ({
         _id: e._id,
+        title: e.Title,
         commitment: e.commitment,
         effort: e.effort,
         mission: e.mission,
