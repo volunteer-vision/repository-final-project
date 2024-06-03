@@ -2,13 +2,15 @@
 import React, { useRef, useState } from 'react';
 import styles from '../styles/login.module.css';
 import { useRouter } from 'next/router';
-
+import toast, { Toaster } from 'react-hot-toast';
 const Login = () => {
   const router = useRouter()
   const [action, setAction] = useState('Login');
   const emailValue = useRef()
   const passwordValue = useRef()
   const confirmPasswordValue = useRef()
+
+ 
 
   async function fetchLogin() {
     if(action === 'Login') {
@@ -22,11 +24,25 @@ const Login = () => {
     }
     const res = await fetch ('api/auth/login', options)
     const data = await res.json()
-    
+   
     
     if(res.status === 200) {
       localStorage.setItem('token', data.id)
       router.push("/")
+      toast.success("Login efetuado com sucesso",{
+        style: {
+          border: '1px solid #2962ff' ,
+          padding: '16px',
+          color: '#2962ff',
+        },
+        iconTheme: {
+          primary: '#2962ff',
+          secondary: '#ffffff',
+        },
+
+      })
+    } else {
+      toast.error("Email ou senha inválidos")
     }
 
   }
@@ -42,8 +58,9 @@ const Login = () => {
         passwordConfirmation: confirmPasswordValue.current.value
       })
     }
+    
     const res = await fetch ('api/auth/signUp',options)
-  
+    
   }}
   
 
@@ -53,6 +70,7 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
+     
       <div className={styles.header}>
         <div className={styles.text}>{action}</div>
         <div className={styles.underLine}></div>

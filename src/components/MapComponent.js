@@ -21,8 +21,13 @@ export default function MapChart() {
     { markerOffset: 15, name: "Mountain Health Initiative", coordinates: [84.124, 28.3949], country: "Nepal" },
     { markerOffset: 15, name: "Coral Reef Conservation Foundation", coordinates: [178.065, -17.7134], country: "Fiji" },
     { markerOffset: 15, name: "Antarctic Research Foundation", coordinates: [135.0, -82.8628], country: "Antarctica" },
+    { markerOffset: 15, name: "Health Horizons", coordinates: [260.340025, 20.072328], country: "Mexico" },
+    { markerOffset: 15, name: "Marine Conservation Volunteer Opportunity in Greece", coordinates: [22.389741, 37.858506], country: "Greece" },
+    { markerOffset: 15, name: "Animal Rescue Volunteer Opportunity in Thailand", coordinates: [100.560760, 15.805], country: "Thailand" },
+    { markerOffset: 15, name: "Youth Empowerment Volunteer Opportunity in South Africa", coordinates: [25.658214, -32.223451], country: "South Africa" },
+    { markerOffset: 15, name: "Cultural Heritage Volunteer Opportunity in Peru", coordinates: [-75.570145, -10.303354], country: "Peru" },
+    
   ];
-
   return (
     <div className={styles.mapContainer}>
       <ComposableMap

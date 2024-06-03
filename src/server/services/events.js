@@ -17,7 +17,7 @@ export async function filterOneEvent(id) {
     const eventos = await findEventById(id);
     return eventos.map((e) => ({
         _id: e._id,
-        title: e.Title,
+        title: e.title,
         commitment: e.commitment,
         effort: e.effort,
         mission: e.mission,
