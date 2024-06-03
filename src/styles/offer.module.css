@@ -62,7 +62,8 @@
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
-    gap: 5px
+    gap: 5px;
+    color: rgb(252, 252, 252);
 }
 
 .card1 {

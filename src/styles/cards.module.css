@@ -16,18 +16,19 @@
   justify-content: space-between;
   padding: 20px;
   align-items: center;
-  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  /* background: linear-gradient(145deg, #e6e6e6, #ffffff); */
   border: 1px solid #ddd;
   transform: scale(1);
+  background-color: #1c82ad;
 }
 
-.cardMurta { background: linear-gradient(145deg, #288FC0, #46D3E3); }
+/* .cardMurta { background: linear-gradient(145deg, #288FC0, #46D3E3); }
 .cardJane { background: linear-gradient(145deg, #46D3E3, #288FC0); }
 .cardMaria { background: linear-gradient(145deg, #3CBDD2, #288FC0); }
 .cardJohn { background: linear-gradient(145deg, hwb(196 20% 18%), #288FC0); }
 .cardJoao { background: linear-gradient(145deg, #288FC0, #1E78AF); }
 .cardCarlos { background: linear-gradient(145deg, #1E78AF, #14619E); }
-.cardEvelyn { background: linear-gradient(145deg, #14619E, #00337C); }
+.cardEvelyn { background: linear-gradient(145deg, #14619E, #00337C); } */
 
 
 
