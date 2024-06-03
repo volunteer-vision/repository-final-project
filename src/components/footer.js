@@ -6,22 +6,37 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { useState } from "react";
 import { FaRegCopyright } from "react-icons/fa";
 
-import Modal from "./modal";
+import toast, { Toaster } from "react-hot-toast";
 
 //npm i react-icons
 
 export default function Footer() {
-  const [openModal, setModal] = useState(false);
+  // const [openModal, setModal] = useState(false);
 
   const [email, setEmail] = useState("");
 
   const handleSubmit = () => {
-    setModal(true);
+    // setModal(true);
     setEmail("");
+    toast.success('Subscribed', {
+      style: {
+        border: '1px solid #2962ff' ,
+        padding: '16px',
+        color: '#2962ff',
+      },
+      iconTheme: {
+        primary: '#2962ff',
+        secondary: '#ffffff',
+      },
+      position: 'top-right',
+    });
+
   };
 
   return (
     <div className={styles.footer} id="footer">
+      <Toaster
+      />
       <div className={styles.container}>
         <div className={styles.newsletter}>
           <div className={styles.newstext}>
@@ -42,7 +57,7 @@ export default function Footer() {
               >
                 Submit
               </button>
-              <Modal modal={openModal} closeModal={() => setModal(false)} />
+              {/* <Modaltest modal={openModal} closeModal={() => setModal(false)} /> */}
             </div>
           </div>
 

@@ -29,7 +29,7 @@ const Login = () => {
     if(res.status === 200) {
       localStorage.setItem('token', data.id)
       router.push("/")
-      toast.success("Login efetuado com sucesso",{
+      toast.success("Logged in",{
         style: {
           border: '1px solid #2962ff' ,
           padding: '16px',
@@ -42,7 +42,7 @@ const Login = () => {
 
       })
     } else {
-      toast.error("Email ou senha inválidos")
+      toast.error("Invalid email or password")
     }
 
   }
